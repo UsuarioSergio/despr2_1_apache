@@ -24,9 +24,21 @@ sudo ufw allow 'Apache Full', esto se hace para que permita http y https el fire
 Comprobación de que están los archivos en el directorio donde se suele encontrar los documentos que se muestran:
 <img width="621" height="331" alt="image" src="https://github.com/user-attachments/assets/a5e505b3-2e36-4d1f-9ae5-b8705a254d24" />
 
+Hay que cambiar el propietario de todos los archivos, de manera recursiva, al usuario y grupo del servidor web (www-data) porque si no apache no va a poder mostrar los archivos por carecer de permisos.
+sudo chown -R www-data:www-data /var/www/html
+sudo chmod -R 755 /var/www/html/
+
+Se limpia la carpeta temporal del home.
+sudo rm -rf ~/practicas
+Es necesario recargar la configuración de Apache porque sino no se van a aplicar los cambios y mostrará las cosas como antes.
+sudo systemctl reload apache2
+
 
 Por ultimo se comprobaria si al entrar en la pagina "http:localhost:8081" porque se habia cambiado:
 <img width="933" height="706" alt="image" src="https://github.com/user-attachments/assets/c5904b81-520e-4bf8-a611-cc610f590b5c" />
 
 Y por último se muestra que pasa si entras a otra parte de la página:
 <img width="802" height="439" alt="image" src="https://github.com/user-attachments/assets/567a53b0-8277-40c1-b23b-53cd79305d11" />
+
+Comprobacion de lo que pasa si intentas acceder al apache por un puerto incorrecto:
+<img width="621" height="331" alt="image" src="https://github.com/user-attachments/assets/f20552cf-0a71-43ab-b62d-80708c346939" />
