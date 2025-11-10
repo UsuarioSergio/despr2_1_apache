@@ -39,6 +39,3 @@ Por ultimo se comprobaria si al entrar en la pagina "http:localhost:8081" porque
 
 Y por último se muestra que pasa si entras a otra parte de la página:
 <img width="802" height="439" alt="image" src="https://github.com/user-attachments/assets/567a53b0-8277-40c1-b23b-53cd79305d11" />
-
-Comprobacion de lo que pasa si intentas acceder al apache por un puerto incorrecto:
-<img width="621" height="331" alt="image" src="https://github.com/user-attachments/assets/f20552cf-0a71-43ab-b62d-80708c346939" />
